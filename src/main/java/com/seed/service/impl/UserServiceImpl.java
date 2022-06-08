@@ -33,33 +33,41 @@ public class UserServiceImpl implements UserService {
         user.setUid(getMaxUserRecordUid());
         user.setCreateTime(registerDate);
         user.setUpdateTime(registerDate);
-        Integer result = userDao.registerUser(user);
-        userDao.addUserRecord(user.getId(),user.getUid());
+        User isUser = userDao.userIsExistName(user.getName());
+        Integer result = null;
+        String name = isUser==null?"":isUser.getName();
+        if (name.equals(user.getName())) {
+            System.out.println("用户已存在");
+            result=0;
+        } else {
+            result = userDao.registerUser(user);
+            userDao.addUserRecord(user.getId(), user.getUid());
+        }
         return result;
     }
 
     @Override
     public Integer addUserRecord(String id, String uid) {
-        return userDao.addUserRecord(id,uid);
+        return userDao.addUserRecord(id, uid);
     }
 
     @Override
     public String getMaxUserRecordUid() {
         String maxCellUid = userDao.getMaxUserRecordUid();
-        if ("".equals(maxCellUid) || maxCellUid.isEmpty()){
+        if ("".equals(maxCellUid) || maxCellUid.isEmpty()) {
             System.out.println(maxCellUid);
             return "10000"; //默认uid从10000开始
         }
-        return String.valueOf((Integer.parseInt(maxCellUid)+1));
+        return String.valueOf((Integer.parseInt(maxCellUid) + 1));
     }
 
     @Override
-    public Integer UpdateUserInformation(User user) {
-        return userDao.UpdateUserInformation(user);
+    public Integer updateUserInformation(User user) {
+        return userDao.updateUserInformation(user);
     }
 
     @Override
-    public User UserLogin(User user) {
-        return userDao.UserLogin(user);
+    public User userLogin(User user) {
+        return userDao.userLogin(user);
     }
 }

@@ -6,6 +6,7 @@ import com.seed.entity.User;
 import java.util.List;
 
 public interface UserService {
+
     List<User> selectAll();
 
     Integer registerUser(User user);
@@ -14,7 +15,7 @@ public interface UserService {
 
     String getMaxUserRecordUid();
 
-    Integer UpdateUserInformation(User user);
+    Integer updateUserInformation(User user);
 
-    User UserLogin(User user);
+    User userLogin(User user);
 }

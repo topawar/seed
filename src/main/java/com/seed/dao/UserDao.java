@@ -16,7 +16,9 @@ public interface UserDao {
 
     String getMaxUserRecordUid();
 
-    Integer UpdateUserInformation(User user);
+    Integer updateUserInformation(User user);
 
-    User UserLogin(User user);
+    User userLogin(User user);
+
+    User userIsExistName(String name);
 }

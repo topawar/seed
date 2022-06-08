@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seed.dao.ArticleDao">
+    <cache eviction="FIFO" flushInterval="60000"></cache>
+    <insert id="addArticle">
+        insert into article(article_id, uid, title, content, article_kind)
+        values (#{at.ArticleId}, #{uid}, #{at.Title}, #{at.Content}, #{at.ArticleKind})
+    </insert>
+
+    <select id="getArticleList" resultType="com.seed.entity.Article">
+        SELECT *
+        FROM `article`
+        <where>
+            <if test="ArticleKind !=null and ArticleKind !=''">
+                article_kind=#{ArticleKind}
+            </if>
+            <if test="Title !=null and Title !=''">
+                and title like "%${Title}%"
+            </if>
+        </where>
+    </select>
+
+    <insert id="addUserComment">
+        insert into user_comment(article_id, name, comment, isanonymity)
+        values (#{ArticleId}, #{Name}, #{Comment}, #{IsAnonymity})
+    </insert>
+
+    <select id="getUserCommentList" resultType="com.seed.entity.UserComment">
+        SELECT *
+        FROM `user_comment`;
+    </select>
+</mapper>

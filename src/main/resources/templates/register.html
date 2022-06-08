@@ -2,41 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>登录</title>
+    <title>注册</title>
 </head>
 <link rel="stylesheet" th:href="@{/css/index.css}">
 <script th:src="@{/js/axios.min.js}"></script>
 <script th:src="@{/js/qs.js}"></script>
 <body>
 <div class="login_div">
-    <h3>登录</h3>
+    <h3>注册</h3>
     <input type="text" id="i1" placeholder="用户名"><br>
     <input type="password" id="i2" placeholder="密码"><br>
-    <button onclick="login()">登录</button>
+    <button onclick="register()">注册</button>
     <br>
-    <a href="/index_forward" class="a1">注册</a>
+    <a href="/index" class="a1">登录</a>
     <a href="#" class="a2">忘记密码</a>
 </div>
 </body>
 </html>
 <script>
 
-    function login() {
+    function register() {
         let name = document.getElementById("i1").value;
         let password = document.getElementById("i2").value;
+        let data={
+            "Name":name,
+            "PassWord":password
+        }
+        console.log(Qs.stringify(data))
         axios({
-            method: 'get',
-            url: '/login',
-            params: {
-                Name: name,
-                PassWord: password
-            }
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            method: 'post',
+            url: '/register',
+            data: Qs.stringify(data)
         }).then(res => {
             console.log(res.data)
-            if (res.data){
-                window.location.href="/test"
+            if (res.data == "添加成功"){
+                alert(res.data)
+                window.location.replace("/index")
             }else{
-                alert("用户名或密码错误")
+                alert(res.data)
             }
         })
     }

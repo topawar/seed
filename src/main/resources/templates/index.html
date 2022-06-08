@@ -2,16 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>登录</title>
 </head>
-<link rel="stylesheet" href="../static/css/index.css">
-<script src="../static/js/axios.min.js"></script>
+<link rel="stylesheet" th:href="@{/css/index.css}">
+<script th:src="@{/js/axios.min.js}"></script>
+<script th:src="@{/js/qs.js}"></script>
 <body>
-    <div>
-
-    </div>
+<div class="login_div">
+    <h3>登录</h3>
+    <input type="text" id="i1" placeholder="用户名"><br>
+    <input type="password" id="i2" placeholder="密码"><br>
+    <button onclick="login()">登录</button>
+    <br>
+    <a href="/index_forward" class="a1">注册</a>
+    <a href="#" class="a2">忘记密码</a>
+</div>
 </body>
 </html>
 <script>
 
+    function login() {
+        let name = document.getElementById("i1").value;
+        let password = document.getElementById("i2").value;
+        axios({
+            method: 'get',
+            url: '/login',
+            params: {
+                Name: name,
+                PassWord: password
+            }
+        }).then(res => {
+            console.log(res.data)
+            if (res.data){
+                window.location.href="/test"
+            }else{
+                alert("用户名或密码错误")
+            }
+        })
+    }
 </script>

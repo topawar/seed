@@ -14,8 +14,8 @@ public class LogHandlerInterceptor implements HandlerInterceptor {
         Boolean code = (Boolean)request.getSession().getAttribute("code")==null ? false:true;
         System.out.println(code);
         if (code){
-            System.out.println("难道还走？");
-            return false;
+            System.out.println("登录成功了");
+            return code;
         }
         response.sendRedirect("/index");
         System.out.println("拦截成功了");
