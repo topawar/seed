@@ -1,37 +1,47 @@
-select{
+select {
     width: 120px;
     height: 32px;
+    text-align: center;
 }
-#d2{
+
+#d1 {
+    float: left;
+}
+
+#d2 {
+    float: left;
     width: 575px;
     height: 720px;
     background-color: #989993;
     margin-left: 432px;
     position: absolute;
 }
-input{
+
+input {
     width: 548px;
     height: 57px;
-    margin-left: 442px;
+    margin-left: 320px;
     margin-bottom: 15px;
     border-style: solid;
     border-radius: 20px;
 }
-#d3{
+
+#d3 {
     float: right;
     width: 271px;
     height: 272px;
     background-color: #D5DFEB;
     box-shadow: #ffffff;
 }
-body{
-    position:fixed;
+
+body {
+    position: fixed;
     top: 0;
     left: 0;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     min-width: 1000px;
-    z-index:-10;
+    z-index: -10;
     zoom: 1;
     background-color: #fff;
     background: url("../images/bk_backgroud.jpg");
@@ -40,4 +50,63 @@ body{
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-position: center 0;
+}
+
+.img1 {
+    left: 403px;
+    top: 187px;
+    width: 131px;
+    height: 131px;
+    background-color: rgba(16, 16, 16, 100);
+    float: left;
+}
+
+.sp1 {
+    width: 320px;
+    height: 52px;
+    line-height: 23px;
+    background-color: rgba(255, 255, 255, 100);
+    color: rgba(16, 16, 16, 100);
+    font-size: 16px;
+    text-align: left;
+    font-family: Roboto;
+    float: left;
+}
+
+.sp2 {
+    width: 442px;
+    height: 70px;
+    color: rgba(16, 16, 16, 100);
+    font-size: 14px;
+    text-align: left;
+    font-family: SourceHanSansSC-regular;
+    float: left;
+}
+
+#d2 .global_size {
+    background: white;
+    width: 575px;
+    height: 131px;
+}
+
+#d2 .next_top {
+    margin-top: 20px
+}
+
+#d3 .head_por {
+    width: 100px;
+    height: 163px;
+    float: left
+}
+
+#d3 img {
+    float: right;
+    width: 135px
+}
+
+#d3 .owner_about {
+    width: 271px;
+    height: 50px;
+    float: left;
+    margin-top: 10px
 }

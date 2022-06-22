@@ -4,22 +4,32 @@
     <meta charset="UTF-8">
     <title>首页</title>
 </head>
-<link rel="stylesheet" href="../static/css/bk_index.css">
+<!--<link rel="stylesheet" href="../static/css/bk_index.css">-->
+<link rel="stylesheet" th:href="@{css/bk_index.css}">
 <body>
-    <div>
-        <select>
-            <option>Java</option>
-            <option>Scala</option>
-            <option>Vue</option>
-        </select>
+<div id="d1">
+    <select>
+        <option th:each="kind : ${kinds}" th:text="${kind.kind}"></option>
+    </select>
+</div>
+<input type="text">
+<div id="d2">
+    <div class="global_size" th:each="article : ${articles}">
+        <img th:src="${article.ImageUrl}" class="img1">
+        <span th:text="${article.Title}" class="sp1"></span>
+        <span th:text="${article.Content}" class="sp2"></span>
     </div>
-    <input type="text">
-    <div id="d2">
-
+</div>
+<div id="d3">
+    <div class="head_por">
+        <h2 th:text="${user.Name}"></h2>
+        <h3 th:text="${user.Gender==1?'男':'女'}"></h3>
+        <h3>爱好：读书,学习,前端</h3>
     </div>
-    <div id="d3">
-
+    <img th:src="${user.ImageUrl}">
+    <div class="owner_about">
+        <span><b>个人简介：...</b></span>
     </div>
-    <embed src="https://svg.digi.ninja/xss.svg">
+</div>
 </body>
 </html>

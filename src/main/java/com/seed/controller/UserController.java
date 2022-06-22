@@ -1,21 +1,33 @@
 package com.seed.controller;
 
 
+import com.seed.dao.ArticleDao;
+import com.seed.dao.UserDao;
+import com.seed.entity.Article;
 import com.seed.entity.User;
 import com.seed.service.impl.UserServiceImpl;
 import com.seed.utils.isEmptyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class UserController {
 
     @Autowired
     UserServiceImpl userServiceImpl;
+    @Autowired
+    ArticleDao articleDao;
+
+    @Autowired
+    HttpServletRequest httpServletRequest;
 
     @ResponseBody
     @RequestMapping(value = "/register", method = RequestMethod.POST)
@@ -48,18 +60,25 @@ public class UserController {
         return "修改成功";
     }
 
-    @ResponseBody
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public Boolean UserLogin(User user, HttpServletRequest request) {
+    @ResponseBody
+    public Map<Object,Object> UserLogin(User user, HttpServletRequest request) {
 
         System.out.println(user);
+        HashMap<Object,Object> resultMap = new HashMap<Object,Object>();
         User isUser = userServiceImpl.userLogin(user);
         System.out.println(isUser);
-        Boolean isExistFlag = !(isUser == null) && !(isUser == null) ? true : false;
+        Boolean isExistFlag = isUser != null ? true : false;
         System.out.println(isExistFlag);
-        request.getSession().setAttribute("code", isExistFlag);
-        request.getSession().setAttribute("user",user);
-        return isExistFlag;
+        if (isExistFlag){
+            request.getSession().setAttribute("user",isUser);
+            request.getSession().setAttribute("code",true);
+            resultMap.put("code","200");
+        }else {
+            resultMap.put("code","500");
+            resultMap.put("msg","用户名或密码错误");
+        }
+        return resultMap;
     }
 
     @RequestMapping(value = {"/index", "", "/"})
@@ -74,10 +93,16 @@ public class UserController {
         return "register";
     }
 
-    @RequestMapping(value = {"/test"})
-    public String test2() {
-
-        System.out.println("进入test方法");
-        return "/test";
+    @RequestMapping(value = {"/bk_index"})
+    public ModelAndView test2() {
+        ModelAndView modelAndView = new ModelAndView();
+        HttpSession session = httpServletRequest.getSession();
+        User user = (User)session.getAttribute("user");
+        modelAndView.setViewName("bk_index");
+        System.out.println(user);
+        modelAndView.addObject("articles",articleDao.getArticleList());
+        modelAndView.addObject("kinds",articleDao.getAllArticleKind());
+        modelAndView.addObject("user", userServiceImpl.userGetById(user.getUid()));
+        return modelAndView;
     }
 }

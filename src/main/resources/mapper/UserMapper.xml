@@ -43,4 +43,10 @@
         from user
         where name = #{Name};
     </select>
+
+    <select id="userGetById" resultType="com.seed.entity.User">
+        select *
+        from user
+        where uid = #{uid};
+    </select>
 </mapper>

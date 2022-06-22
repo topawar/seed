@@ -1,6 +1,7 @@
 package com.seed.dao;
 
 import com.seed.entity.Article;
+import com.seed.entity.ArticleKind;
 import com.seed.entity.UserComment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -19,8 +20,12 @@ public interface ArticleDao {
 
     List<Article> getArticleList(@Param("ArticleKind")String ArticleKind,@Param("Title")String Title);
 
+    List<Article> getArticleList();
+
     Integer addUserComment(UserComment userComment);
 
     List<UserComment> getUserCommentList();
+
+    List<ArticleKind> getAllArticleKind();
 
 }

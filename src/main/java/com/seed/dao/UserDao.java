@@ -21,4 +21,6 @@ public interface UserDao {
     User userLogin(User user);
 
     User userIsExistName(String name);
+
+    User userGetById(String uid);
 }

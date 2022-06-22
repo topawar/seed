@@ -1,70 +1,67 @@
-2022-06-08 00:17:07,569 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
-2022-06-08 00:17:07,576 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
-2022-06-08 00:17:12,915 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 23236 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
-2022-06-08 00:17:12,917 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
-2022-06-08 00:17:13,628 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-06-08 00:17:13,643 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-06-08 00:17:13,662 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-06-08 00:17:14,044 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
-2022-06-08 00:17:14,051 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
-2022-06-08 00:17:14,052 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
-2022-06-08 00:17:14,105 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
-2022-06-08 00:17:14,105 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1142 ms
-2022-06-08 00:17:14,189 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
-2022-06-08 00:17:14,253 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
-2022-06-08 00:17:14,534 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
-2022-06-08 00:17:14,550 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
-2022-06-08 00:17:14,917 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
-2022-06-08 00:17:14,925 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 2.45 seconds (JVM running for 3.195)
-2022-06-08 00:17:30,417 [INFO] [http-nio-8088-exec-1] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-08 00:17:30,418 [INFO] [http-nio-8088-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
-2022-06-08 00:17:30,419 [INFO] [http-nio-8088-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 1 ms
-2022-06-08 00:17:33,970 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
-2022-06-08 00:17:34,060 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where name = ? and password = ?;
-2022-06-08 00:17:34,080 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==> Parameters: 万叶(String), WY20030125(String)
-2022-06-08 00:17:34,098 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] <==      Total: 1
-2022-06-08 00:17:35,723 [ERROR] [http-nio-8088-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet] [DirectJDKLog.java : 175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'title' not found. Available parameters are [ArticleKind, Title, param1, param2]] with root cause
-org.apache.ibatis.binding.BindingException: Parameter 'title' not found. Available parameters are [ArticleKind, Title, param1, param2]
-	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:212)
-	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:120)
-	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:3338)
-	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:121)
-	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
-	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
-	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:50)
-	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
-	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
-	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:560)
-	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:524)
-	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:46)
-	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
-	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:34)
-	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
-	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:55)
-	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
-	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:39)
-	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:305)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:87)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+2022-06-23 00:04:54,116 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 20688 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
+2022-06-23 00:04:54,127 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
+2022-06-23 00:04:55,300 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-23 00:04:55,303 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-23 00:04:55,344 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2022-06-23 00:04:56,051 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
+2022-06-23 00:04:56,061 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2022-06-23 00:04:56,062 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-06-23 00:04:56,206 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2022-06-23 00:04:56,206 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1974 ms
+2022-06-23 00:04:56,361 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-06-23 00:04:56,496 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
+2022-06-23 00:04:57,030 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-06-23 00:04:57,057 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
+2022-06-23 00:04:57,750 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
+2022-06-23 00:04:57,765 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 4.668 seconds (JVM running for 6.958)
+2022-06-23 00:05:05,899 [INFO] [http-nio-8088-exec-1] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-23 00:05:05,900 [INFO] [http-nio-8088-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
+2022-06-23 00:05:05,902 [INFO] [http-nio-8088-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 2 ms
+2022-06-23 00:05:05,974 [DEBUG] [http-nio-8088-exec-1] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
+2022-06-23 00:05:06,120 [DEBUG] [http-nio-8088-exec-1] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where name = ? and password = ?;
+2022-06-23 00:05:06,154 [DEBUG] [http-nio-8088-exec-1] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==> Parameters: 万叶(String), WY20030125(String)
+2022-06-23 00:05:06,181 [DEBUG] [http-nio-8088-exec-1] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] <==      Total: 1
+2022-06-23 00:05:29,000 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
+2022-06-23 00:05:29,001 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT * FROM `article`
+2022-06-23 00:05:29,002 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==> Parameters: 
+2022-06-23 00:05:29,006 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] <==      Total: 2
+2022-06-23 00:05:29,007 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
+2022-06-23 00:05:29,008 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao.getAllArticleKind [BaseJdbcLogger.java : 137] ==>  Preparing: select * from article_kind where iseffective=1;
+2022-06-23 00:05:29,009 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao.getAllArticleKind [BaseJdbcLogger.java : 137] ==> Parameters: 
+2022-06-23 00:05:29,011 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao.getAllArticleKind [BaseJdbcLogger.java : 137] <==      Total: 5
+2022-06-23 00:05:29,027 [ERROR] [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet] [DirectJDKLog.java : 175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.cache.CacheException: Error serializing object.  Cause: java.io.NotSerializableException: com.seed.entity.ArticleKind] with root cause
+java.io.NotSerializableException: com.seed.entity.ArticleKind
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at java.util.ArrayList.writeObject(ArrayList.java:768)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1155)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1496)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.ibatis.cache.decorators.SerializedCache.serialize(SerializedCache.java:90)
+	at org.apache.ibatis.cache.decorators.SerializedCache.putObject(SerializedCache.java:55)
+	at org.apache.ibatis.cache.decorators.LoggingCache.putObject(LoggingCache.java:49)
+	at org.apache.ibatis.cache.decorators.SynchronizedCache.putObject(SynchronizedCache.java:43)
+	at org.apache.ibatis.cache.decorators.TransactionalCache.flushPendingEntries(TransactionalCache.java:116)
+	at org.apache.ibatis.cache.decorators.TransactionalCache.commit(TransactionalCache.java:99)
+	at org.apache.ibatis.cache.TransactionalCacheManager.commit(TransactionalCacheManager.java:44)
+	at org.apache.ibatis.executor.CachingExecutor.close(CachingExecutor.java:61)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.close(DefaultSqlSession.java:263)
+	at org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:195)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:448)
 	at com.sun.proxy.$Proxy62.selectList(Unknown Source)
 	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
 	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
 	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy63.getArticleList(Unknown Source)
-	at com.seed.service.impl.ArticleServiceImpl.getArticleList(ArticleServiceImpl.java:41)
-	at com.seed.controller.ArticleController.getArticleList(ArticleController.java:50)
+	at com.sun.proxy.$Proxy63.getAllArticleKind(Unknown Source)
+	at com.seed.controller.UserController.test2(UserController.java:104)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -115,731 +112,122 @@ org.apache.ibatis.binding.BindingException: Parameter 'title' not found. Availab
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2022-06-08 00:18:08,290 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
-2022-06-08 00:18:08,295 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
-2022-06-08 00:18:11,208 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 14164 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
-2022-06-08 00:18:11,211 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
-2022-06-08 00:18:11,832 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-06-08 00:18:11,834 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-06-08 00:18:11,855 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2022-06-08 00:18:12,228 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
-2022-06-08 00:18:12,234 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
-2022-06-08 00:18:12,234 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
-2022-06-08 00:18:12,293 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
-2022-06-08 00:18:12,293 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1044 ms
-2022-06-08 00:18:12,379 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
-2022-06-08 00:18:12,445 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
-2022-06-08 00:18:12,727 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
-2022-06-08 00:18:12,744 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
-2022-06-08 00:18:13,102 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
-2022-06-08 00:18:13,109 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 2.306 seconds (JVM running for 3.108)
-2022-06-08 00:18:23,496 [INFO] [http-nio-8088-exec-2] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-08 00:18:23,496 [INFO] [http-nio-8088-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
-2022-06-08 00:18:23,497 [INFO] [http-nio-8088-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 1 ms
-2022-06-08 00:18:26,897 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
-2022-06-08 00:18:26,989 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where name = ? and password = ?;
-2022-06-08 00:18:27,012 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==> Parameters: 万叶(String), WY20030125(String)
-2022-06-08 00:18:27,030 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] <==      Total: 1
-2022-06-08 00:18:28,914 [ERROR] [http-nio-8088-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet] [DirectJDKLog.java : 175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'Titie' not found. Available parameters are [ArticleKind, Title, param1, param2]] with root cause
-org.apache.ibatis.binding.BindingException: Parameter 'Titie' not found. Available parameters are [ArticleKind, Title, param1, param2]
-	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:212)
-	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:45)
-	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122)
-	at org.apache.ibatis.executor.BaseExecutor.createCacheKey(BaseExecutor.java:219)
-	at org.apache.ibatis.executor.CachingExecutor.createCacheKey(CachingExecutor.java:146)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:88)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at com.sun.proxy.$Proxy62.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy63.getArticleList(Unknown Source)
-	at com.seed.service.impl.ArticleServiceImpl.getArticleList(ArticleServiceImpl.java:41)
-	at com.seed.controller.ArticleController.getArticleList(ArticleController.java:50)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2022-06-08 00:19:16,807 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
-2022-06-08 00:19:16,811 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
-2022-06-08 00:19:19,771 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 25300 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
-2022-06-08 00:19:19,775 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
-2022-06-08 00:19:20,429 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-06-08 00:19:20,432 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-06-08 00:19:20,457 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2022-06-08 00:19:20,849 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
-2022-06-08 00:19:20,855 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
-2022-06-08 00:19:20,856 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
-2022-06-08 00:19:20,914 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
-2022-06-08 00:19:20,914 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1101 ms
-2022-06-08 00:19:21,006 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
-2022-06-08 00:19:21,075 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
-2022-06-08 00:19:21,353 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
-2022-06-08 00:19:21,371 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
-2022-06-08 00:19:21,719 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
-2022-06-08 00:19:21,727 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 2.385 seconds (JVM running for 3.175)
-2022-06-08 00:19:23,695 [INFO] [http-nio-8088-exec-2] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-08 00:19:23,696 [INFO] [http-nio-8088-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
-2022-06-08 00:19:23,696 [INFO] [http-nio-8088-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 0 ms
-2022-06-08 00:19:23,731 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
-2022-06-08 00:19:23,821 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where name = ? and password = ?;
-2022-06-08 00:19:23,839 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==> Parameters: 万叶(String), WY20030125(String)
-2022-06-08 00:19:23,854 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] <==      Total: 1
-2022-06-08 00:19:26,607 [ERROR] [http-nio-8088-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet] [DirectJDKLog.java : 175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'Titie' not found. Available parameters are [ArticleKind, Title, param1, param2]] with root cause
-org.apache.ibatis.binding.BindingException: Parameter 'Titie' not found. Available parameters are [ArticleKind, Title, param1, param2]
-	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:212)
-	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:45)
-	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122)
-	at org.apache.ibatis.executor.BaseExecutor.createCacheKey(BaseExecutor.java:219)
-	at org.apache.ibatis.executor.CachingExecutor.createCacheKey(CachingExecutor.java:146)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:88)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at com.sun.proxy.$Proxy62.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy63.getArticleList(Unknown Source)
-	at com.seed.service.impl.ArticleServiceImpl.getArticleList(ArticleServiceImpl.java:41)
-	at com.seed.controller.ArticleController.getArticleList(ArticleController.java:50)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2022-06-08 00:20:14,924 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
-2022-06-08 00:20:14,928 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
-2022-06-08 00:20:19,614 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 22896 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
-2022-06-08 00:20:19,617 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
-2022-06-08 00:20:20,282 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-06-08 00:20:20,284 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-06-08 00:20:20,305 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-06-08 00:20:20,685 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
-2022-06-08 00:20:20,691 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
-2022-06-08 00:20:20,691 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
-2022-06-08 00:20:20,745 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
-2022-06-08 00:20:20,746 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1078 ms
-2022-06-08 00:20:20,831 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
-2022-06-08 00:20:20,898 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
-2022-06-08 00:20:21,177 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
-2022-06-08 00:20:21,194 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
-2022-06-08 00:20:21,544 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
-2022-06-08 00:20:21,552 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 2.416 seconds (JVM running for 3.153)
-2022-06-08 00:20:24,511 [INFO] [http-nio-8088-exec-1] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-08 00:20:24,511 [INFO] [http-nio-8088-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
-2022-06-08 00:20:24,512 [INFO] [http-nio-8088-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 1 ms
-2022-06-08 00:20:24,545 [DEBUG] [http-nio-8088-exec-1] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
-2022-06-08 00:20:24,637 [DEBUG] [http-nio-8088-exec-1] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where name = ? and password = ?;
-2022-06-08 00:20:24,654 [DEBUG] [http-nio-8088-exec-1] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==> Parameters: 万叶(String), WY20030125(String)
-2022-06-08 00:20:24,670 [DEBUG] [http-nio-8088-exec-1] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] <==      Total: 1
-2022-06-08 00:20:27,707 [ERROR] [http-nio-8088-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet] [DirectJDKLog.java : 175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'Titie' not found. Available parameters are [ArticleKind, Title, param1, param2]] with root cause
-org.apache.ibatis.binding.BindingException: Parameter 'Titie' not found. Available parameters are [ArticleKind, Title, param1, param2]
-	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:212)
-	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:45)
-	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122)
-	at org.apache.ibatis.executor.BaseExecutor.createCacheKey(BaseExecutor.java:219)
-	at org.apache.ibatis.executor.CachingExecutor.createCacheKey(CachingExecutor.java:146)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:88)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at com.sun.proxy.$Proxy62.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy63.getArticleList(Unknown Source)
-	at com.seed.service.impl.ArticleServiceImpl.getArticleList(ArticleServiceImpl.java:41)
-	at com.seed.controller.ArticleController.getArticleList(ArticleController.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2022-06-08 00:21:39,984 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
-2022-06-08 00:21:39,988 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
-2022-06-08 00:21:42,979 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 10400 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
-2022-06-08 00:21:42,982 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
-2022-06-08 00:21:43,632 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-06-08 00:21:43,635 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-06-08 00:21:43,657 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2022-06-08 00:21:44,041 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
-2022-06-08 00:21:44,048 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
-2022-06-08 00:21:44,049 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
-2022-06-08 00:21:44,103 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
-2022-06-08 00:21:44,104 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1081 ms
-2022-06-08 00:21:44,187 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
-2022-06-08 00:21:44,252 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
-2022-06-08 00:21:44,527 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
-2022-06-08 00:21:44,544 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
-2022-06-08 00:21:44,897 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
-2022-06-08 00:21:44,905 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 2.347 seconds (JVM running for 3.124)
-2022-06-08 00:21:50,161 [INFO] [http-nio-8088-exec-2] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-08 00:21:50,161 [INFO] [http-nio-8088-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
-2022-06-08 00:21:50,163 [INFO] [http-nio-8088-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 2 ms
-2022-06-08 00:21:50,200 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
-2022-06-08 00:21:50,302 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where name = ? and password = ?;
-2022-06-08 00:21:50,319 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==> Parameters: 万叶(String), WY20030125(String)
-2022-06-08 00:21:50,336 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] <==      Total: 1
-2022-06-08 00:21:52,033 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
-2022-06-08 00:21:52,033 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT * FROM `article` WHERE article_kind=? and title like %?%
-2022-06-08 00:21:52,034 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==> Parameters: (String), 异常(String)
-2022-06-08 00:21:52,099 [ERROR] [http-nio-8088-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet] [DirectJDKLog.java : 175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'异常'%' at line 6
-### The error may exist in file [D:\Project\ideaProject\seed\target\classes\mapper\AriticleMappper.xml]
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: SELECT *         FROM `article`          WHERE article_kind=?                                           and title like %?%
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'异常'%' at line 6
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'异常'%' at line 6] with root cause
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'异常'%' at line 6
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
-	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
-	at com.sun.proxy.$Proxy79.execute(Unknown Source)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:103)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at com.sun.proxy.$Proxy62.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy63.getArticleList(Unknown Source)
-	at com.seed.service.impl.ArticleServiceImpl.getArticleList(ArticleServiceImpl.java:41)
-	at com.seed.controller.ArticleController.getArticleList(ArticleController.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2022-06-08 00:22:39,013 [WARN] [http-nio-8088-exec-5] o.s.web.servlet.mvc.support.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java : 207] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'ArticleKind' for method parameter type String is not present]
-2022-06-08 00:23:17,497 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
-2022-06-08 00:23:17,500 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
-2022-06-08 00:23:20,448 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 22732 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
-2022-06-08 00:23:20,451 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
-2022-06-08 00:23:21,098 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-06-08 00:23:21,100 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-06-08 00:23:21,120 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2022-06-08 00:23:21,492 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
-2022-06-08 00:23:21,498 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
-2022-06-08 00:23:21,498 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
-2022-06-08 00:23:21,553 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
-2022-06-08 00:23:21,553 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1051 ms
-2022-06-08 00:23:21,638 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
-2022-06-08 00:23:21,702 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
-2022-06-08 00:23:21,979 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
-2022-06-08 00:23:21,994 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
-2022-06-08 00:23:22,350 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
-2022-06-08 00:23:22,357 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 2.304 seconds (JVM running for 3.082)
-2022-06-08 00:23:28,693 [INFO] [http-nio-8088-exec-2] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-08 00:23:28,694 [INFO] [http-nio-8088-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
-2022-06-08 00:23:28,695 [INFO] [http-nio-8088-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 1 ms
-2022-06-08 00:23:31,327 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
-2022-06-08 00:23:31,419 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where name = ? and password = ?;
-2022-06-08 00:23:31,440 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==> Parameters: 万叶(String), WY20030125(String)
-2022-06-08 00:23:31,458 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] <==      Total: 1
-2022-06-08 00:23:33,793 [DEBUG] [http-nio-8088-exec-5] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
-2022-06-08 00:23:33,793 [DEBUG] [http-nio-8088-exec-5] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT * FROM `article` WHERE title like %?%
-2022-06-08 00:23:33,794 [DEBUG] [http-nio-8088-exec-5] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==> Parameters: 异常(String)
-2022-06-08 00:23:33,859 [ERROR] [http-nio-8088-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet] [DirectJDKLog.java : 175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'异常'%' at line 3
-### The error may exist in file [D:\Project\ideaProject\seed\target\classes\mapper\AriticleMappper.xml]
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: SELECT *         FROM `article`          WHERE  title like %?%
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'异常'%' at line 3
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'异常'%' at line 3] with root cause
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'异常'%' at line 3
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
-	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
-	at com.sun.proxy.$Proxy79.execute(Unknown Source)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:103)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at com.sun.proxy.$Proxy62.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy63.getArticleList(Unknown Source)
-	at com.seed.service.impl.ArticleServiceImpl.getArticleList(ArticleServiceImpl.java:41)
-	at com.seed.controller.ArticleController.getArticleList(ArticleController.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2022-06-08 00:24:27,257 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
-2022-06-08 00:24:27,261 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
-2022-06-08 00:24:30,177 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 24088 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
-2022-06-08 00:24:30,180 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
-2022-06-08 00:24:30,862 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-06-08 00:24:30,865 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-06-08 00:24:30,887 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-06-08 00:24:31,285 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
-2022-06-08 00:24:31,290 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
-2022-06-08 00:24:31,290 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
-2022-06-08 00:24:31,346 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
-2022-06-08 00:24:31,346 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1128 ms
-2022-06-08 00:24:31,443 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
-2022-06-08 00:24:31,515 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
-2022-06-08 00:24:31,795 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
-2022-06-08 00:24:31,812 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
-2022-06-08 00:24:32,181 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
-2022-06-08 00:24:32,190 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 2.441 seconds (JVM running for 3.196)
-2022-06-08 00:24:36,928 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
-2022-06-08 00:24:36,929 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
-2022-06-08 00:24:39,849 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 13560 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
-2022-06-08 00:24:39,854 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
-2022-06-08 00:24:40,519 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-06-08 00:24:40,521 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-06-08 00:24:40,545 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2022-06-08 00:24:40,953 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
-2022-06-08 00:24:40,960 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
-2022-06-08 00:24:40,960 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
-2022-06-08 00:24:41,016 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
-2022-06-08 00:24:41,017 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1122 ms
-2022-06-08 00:24:41,104 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
-2022-06-08 00:24:41,176 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
-2022-06-08 00:24:41,459 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
-2022-06-08 00:24:41,476 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
-2022-06-08 00:24:41,826 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
-2022-06-08 00:24:41,833 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 2.385 seconds (JVM running for 3.157)
-2022-06-08 00:24:46,642 [INFO] [http-nio-8088-exec-2] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-08 00:24:46,642 [INFO] [http-nio-8088-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
-2022-06-08 00:24:46,643 [INFO] [http-nio-8088-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 0 ms
-2022-06-08 00:24:46,676 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
-2022-06-08 00:24:46,769 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where name = ? and password = ?;
-2022-06-08 00:24:46,788 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==> Parameters: 万叶(String), WY20030125(String)
-2022-06-08 00:24:46,803 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] <==      Total: 1
-2022-06-08 00:24:48,938 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
-2022-06-08 00:24:48,939 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT * FROM `article` WHERE title like "%?%"
-2022-06-08 00:24:48,951 [ERROR] [http-nio-8088-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet] [DirectJDKLog.java : 175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='Title', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).] with root cause
-java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.checkBounds(ClientPreparedStatement.java:1396)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.getCoreParameterIndex(ClientPreparedStatement.java:1409)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.setString(ClientPreparedStatement.java:1776)
-	at com.alibaba.druid.pool.DruidPooledPreparedStatement.setString(DruidPooledPreparedStatement.java:369)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:67)
-	at com.sun.proxy.$Proxy79.setString(Unknown Source)
-	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:31)
-	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:26)
-	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
-	at org.apache.ibatis.type.UnknownTypeHandler.setNonNullParameter(UnknownTypeHandler.java:67)
-	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
-	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:103)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
-	at com.sun.proxy.$Proxy62.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy63.getArticleList(Unknown Source)
-	at com.seed.service.impl.ArticleServiceImpl.getArticleList(ArticleServiceImpl.java:41)
-	at com.seed.controller.ArticleController.getArticleList(ArticleController.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2022-06-08 00:28:11,023 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
-2022-06-08 00:28:11,027 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
-2022-06-08 00:28:13,989 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 31408 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
-2022-06-08 00:28:13,993 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
-2022-06-08 00:28:14,614 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-06-08 00:28:14,618 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-06-08 00:28:14,639 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-06-08 00:28:15,018 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
-2022-06-08 00:28:15,025 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
-2022-06-08 00:28:15,025 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
-2022-06-08 00:28:15,081 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
-2022-06-08 00:28:15,082 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1051 ms
-2022-06-08 00:28:15,165 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
-2022-06-08 00:28:15,228 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
-2022-06-08 00:28:15,503 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
-2022-06-08 00:28:15,520 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
-2022-06-08 00:28:15,870 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
-2022-06-08 00:28:15,878 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 2.29 seconds (JVM running for 3.051)
-2022-06-08 00:28:18,636 [INFO] [http-nio-8088-exec-2] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-08 00:28:18,637 [INFO] [http-nio-8088-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
-2022-06-08 00:28:18,637 [INFO] [http-nio-8088-exec-2] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 0 ms
-2022-06-08 00:28:18,672 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
-2022-06-08 00:28:18,763 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where name = ? and password = ?;
-2022-06-08 00:28:18,782 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==> Parameters: 万叶(String), WY20030125(String)
-2022-06-08 00:28:18,797 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] <==      Total: 1
-2022-06-08 00:28:21,253 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
-2022-06-08 00:28:21,253 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT * FROM `article` WHERE title like "%异常%"
-2022-06-08 00:28:21,254 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==> Parameters: 
-2022-06-08 00:28:21,257 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] <==      Total: 1
-2022-06-08 00:28:21,258 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
-2022-06-08 00:28:21,260 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao.getUserCommentList [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT * FROM `user_comment`;
-2022-06-08 00:28:21,260 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao.getUserCommentList [BaseJdbcLogger.java : 137] ==> Parameters: 
-2022-06-08 00:28:21,261 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao.getUserCommentList [BaseJdbcLogger.java : 137] <==      Total: 5
-2022-06-08 00:28:45,925 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
-2022-06-08 00:28:45,925 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT * FROM `article` WHERE title like "%mybatis%"
-2022-06-08 00:28:45,925 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==> Parameters: 
-2022-06-08 00:28:45,927 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] <==      Total: 1
-2022-06-08 00:28:45,928 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.25
-2022-06-08 00:28:53,734 [DEBUG] [http-nio-8088-exec-5] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.2
-2022-06-08 00:28:53,735 [DEBUG] [http-nio-8088-exec-5] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT * FROM `article` WHERE article_kind=? and title like "%mybatis%"
-2022-06-08 00:28:53,735 [DEBUG] [http-nio-8088-exec-5] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==> Parameters: VUE(String)
-2022-06-08 00:28:53,737 [DEBUG] [http-nio-8088-exec-5] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] <==      Total: 0
-2022-06-08 00:28:53,737 [DEBUG] [http-nio-8088-exec-5] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.3333333333333333
-2022-06-08 00:28:58,030 [DEBUG] [http-nio-8088-exec-6] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.42857142857142855
-2022-06-08 00:28:58,030 [DEBUG] [http-nio-8088-exec-6] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.5
-2022-06-08 00:29:03,025 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
-2022-06-08 00:29:03,029 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
+2022-06-23 00:06:34,021 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
+2022-06-23 00:06:34,029 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
+2022-06-23 00:06:44,858 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 13800 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
+2022-06-23 00:06:44,865 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
+2022-06-23 00:06:45,986 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-23 00:06:45,989 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-23 00:06:46,022 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2022-06-23 00:06:46,755 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
+2022-06-23 00:06:46,766 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2022-06-23 00:06:46,766 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-06-23 00:06:46,943 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2022-06-23 00:06:46,943 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1940 ms
+2022-06-23 00:06:47,108 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-06-23 00:06:47,213 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
+2022-06-23 00:06:47,711 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-06-23 00:06:47,737 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
+2022-06-23 00:06:48,463 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
+2022-06-23 00:06:48,476 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 4.6 seconds (JVM running for 7.662)
+2022-06-23 00:06:57,680 [INFO] [http-nio-8088-exec-1] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-23 00:06:57,681 [INFO] [http-nio-8088-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
+2022-06-23 00:06:57,683 [INFO] [http-nio-8088-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 1 ms
+2022-06-23 00:06:57,754 [DEBUG] [http-nio-8088-exec-1] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
+2022-06-23 00:06:57,891 [DEBUG] [http-nio-8088-exec-1] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where name = ? and password = ?;
+2022-06-23 00:06:57,929 [DEBUG] [http-nio-8088-exec-1] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==> Parameters: 万叶(String), WY20030125(String)
+2022-06-23 00:06:57,961 [DEBUG] [http-nio-8088-exec-1] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] <==      Total: 1
+2022-06-23 00:07:03,800 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
+2022-06-23 00:07:03,801 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT * FROM `article`
+2022-06-23 00:07:03,802 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==> Parameters: 
+2022-06-23 00:07:03,808 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] <==      Total: 2
+2022-06-23 00:07:03,810 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
+2022-06-23 00:07:03,811 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao.getAllArticleKind [BaseJdbcLogger.java : 137] ==>  Preparing: select * from article_kind where iseffective=1;
+2022-06-23 00:07:03,812 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao.getAllArticleKind [BaseJdbcLogger.java : 137] ==> Parameters: 
+2022-06-23 00:07:03,814 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.ArticleDao.getAllArticleKind [BaseJdbcLogger.java : 137] <==      Total: 5
+2022-06-23 00:07:03,816 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
+2022-06-23 00:07:03,817 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userGetById [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where uid = ?;
+2022-06-23 00:07:03,818 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userGetById [BaseJdbcLogger.java : 137] ==> Parameters: 10000(String)
+2022-06-23 00:07:03,821 [DEBUG] [http-nio-8088-exec-2] com.seed.dao.UserDao.userGetById [BaseJdbcLogger.java : 137] <==      Total: 1
+2022-06-23 00:07:19,521 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.3333333333333333
+2022-06-23 00:07:19,523 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.5
+2022-06-23 00:07:19,525 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.3333333333333333
+2022-06-23 00:09:31,021 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
+2022-06-23 00:09:31,028 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
+2022-06-23 00:09:41,734 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 26920 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
+2022-06-23 00:09:41,745 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
+2022-06-23 00:09:43,004 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-23 00:09:43,008 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-23 00:09:43,044 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2022-06-23 00:09:43,792 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
+2022-06-23 00:09:43,804 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2022-06-23 00:09:43,805 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-06-23 00:09:43,966 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2022-06-23 00:09:43,967 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 2078 ms
+2022-06-23 00:09:44,129 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-06-23 00:09:44,253 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
+2022-06-23 00:09:44,803 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-06-23 00:09:44,842 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
+2022-06-23 00:09:45,583 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
+2022-06-23 00:09:45,600 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 4.861 seconds (JVM running for 9.129)
+2022-06-23 00:09:45,669 [INFO] [http-nio-8088-exec-1] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-23 00:09:45,669 [INFO] [http-nio-8088-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
+2022-06-23 00:09:45,671 [INFO] [http-nio-8088-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 1 ms
+2022-06-23 00:10:02,321 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
+2022-06-23 00:10:02,474 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where name = ? and password = ?;
+2022-06-23 00:10:02,509 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==> Parameters: 万叶(String), WY20030125(String)
+2022-06-23 00:10:02,541 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] <==      Total: 1
+2022-06-23 00:10:03,961 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
+2022-06-23 00:10:03,962 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT * FROM `article`
+2022-06-23 00:10:03,963 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==> Parameters: 
+2022-06-23 00:10:03,967 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] <==      Total: 2
+2022-06-23 00:10:03,970 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
+2022-06-23 00:10:03,970 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getAllArticleKind [BaseJdbcLogger.java : 137] ==>  Preparing: select * from article_kind where iseffective=1;
+2022-06-23 00:10:03,971 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getAllArticleKind [BaseJdbcLogger.java : 137] ==> Parameters: 
+2022-06-23 00:10:03,974 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getAllArticleKind [BaseJdbcLogger.java : 137] <==      Total: 5
+2022-06-23 00:10:03,977 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
+2022-06-23 00:10:03,977 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userGetById [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where uid = ?;
+2022-06-23 00:10:03,978 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userGetById [BaseJdbcLogger.java : 137] ==> Parameters: 10000(String)
+2022-06-23 00:10:03,980 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userGetById [BaseJdbcLogger.java : 137] <==      Total: 1
+2022-06-23 00:10:28,815 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
+2022-06-23 00:10:28,821 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed
+2022-06-23 00:10:37,355 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 55] Starting SeedApplication using Java 1.8.0_311 on DESKTOP-310QJ1V with PID 24928 (D:\Project\ideaProject\seed\target\classes started by 34424 in D:\Project\ideaProject\seed)
+2022-06-23 00:10:37,359 [INFO] [main] com.seed.SeedApplication [SpringApplication.java : 663] The following profiles are active: test
+2022-06-23 00:10:38,288 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-23 00:10:38,291 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-23 00:10:38,324 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-06-23 00:10:39,028 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8088 (http)
+2022-06-23 00:10:39,044 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2022-06-23 00:10:39,044 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-06-23 00:10:39,216 [INFO] [main] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2022-06-23 00:10:39,217 [INFO] [main] o.s.b.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 1783 ms
+2022-06-23 00:10:39,391 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-06-23 00:10:39,502 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 998] {dataSource-1} inited
+2022-06-23 00:10:39,980 [INFO] [main] o.s.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-06-23 00:10:40,009 [WARN] [main] o.s.web.servlet.resource.ResourceHttpRequestHandler [ResourceHttpRequestHandler.java : 392] Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
+2022-06-23 00:10:40,638 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8088 (http) with context path ''
+2022-06-23 00:10:40,659 [INFO] [main] com.seed.SeedApplication [StartupInfoLogger.java : 61] Started SeedApplication in 4.226 seconds (JVM running for 6.312)
+2022-06-23 00:10:40,705 [INFO] [http-nio-8088-exec-1] o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-23 00:10:40,706 [INFO] [http-nio-8088-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
+2022-06-23 00:10:40,707 [INFO] [http-nio-8088-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 1 ms
+2022-06-23 00:10:51,216 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
+2022-06-23 00:10:51,330 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where name = ? and password = ?;
+2022-06-23 00:10:51,352 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] ==> Parameters: 万叶(String), WY20030125(String)
+2022-06-23 00:10:51,378 [DEBUG] [http-nio-8088-exec-3] com.seed.dao.UserDao.userLogin [BaseJdbcLogger.java : 137] <==      Total: 1
+2022-06-23 00:10:52,650 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
+2022-06-23 00:10:52,651 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==>  Preparing: SELECT * FROM `article`
+2022-06-23 00:10:52,652 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] ==> Parameters: 
+2022-06-23 00:10:52,656 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getArticleList [BaseJdbcLogger.java : 137] <==      Total: 2
+2022-06-23 00:10:52,659 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.0
+2022-06-23 00:10:52,660 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getAllArticleKind [BaseJdbcLogger.java : 137] ==>  Preparing: select * from article_kind where iseffective=1;
+2022-06-23 00:10:52,662 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getAllArticleKind [BaseJdbcLogger.java : 137] ==> Parameters: 
+2022-06-23 00:10:52,665 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.ArticleDao.getAllArticleKind [BaseJdbcLogger.java : 137] <==      Total: 5
+2022-06-23 00:10:52,667 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.0
+2022-06-23 00:10:52,667 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userGetById [BaseJdbcLogger.java : 137] ==>  Preparing: select * from user where uid = ?;
+2022-06-23 00:10:52,668 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userGetById [BaseJdbcLogger.java : 137] ==> Parameters: 10000(String)
+2022-06-23 00:10:52,671 [DEBUG] [http-nio-8088-exec-4] com.seed.dao.UserDao.userGetById [BaseJdbcLogger.java : 137] <==      Total: 1
+2022-06-23 00:11:34,423 [DEBUG] [http-nio-8088-exec-5] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.3333333333333333
+2022-06-23 00:11:34,424 [DEBUG] [http-nio-8088-exec-5] com.seed.dao.ArticleDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.ArticleDao]: 0.5
+2022-06-23 00:11:34,426 [DEBUG] [http-nio-8088-exec-5] com.seed.dao.UserDao [LoggingCache.java : 60] Cache Hit Ratio [com.seed.dao.UserDao]: 0.3333333333333333
+2022-06-23 00:11:39,305 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2071] {dataSource-1} closing ...
+2022-06-23 00:11:39,311 [INFO] [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 2144] {dataSource-1} closed

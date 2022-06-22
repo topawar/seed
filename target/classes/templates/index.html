@@ -10,11 +10,11 @@
 <body>
 <div class="login_div">
     <h3>登录</h3>
-    <input type="text" id="i1" placeholder="用户名"><br>
-    <input type="password" id="i2" placeholder="密码"><br>
-    <button onclick="login()">登录</button>
+    <input th:type="text" id="i1" placeholder="用户名"><br>
+    <input th:type="password" id="i2" placeholder="密码"><br>
+    <button th:onclick="login()">登录</button>
     <br>
-    <a href="/index_forward" class="a1">注册</a>
+    <a th:href="@{/index_forward}" class="a1">注册</a>
     <a href="#" class="a2">忘记密码</a>
 </div>
 </body>
@@ -33,10 +33,12 @@
             }
         }).then(res => {
             console.log(res.data)
-            if (res.data){
-                window.location.href="/test"
-            }else{
-                alert("用户名或密码错误")
+            if(res.data.code == 200){
+                alert("登录成功");
+                window.location.href="bk_index"
+                    // "?articles="+res.data.articles;
+            }else {
+                alert("登录失败");
             }
         })
     }

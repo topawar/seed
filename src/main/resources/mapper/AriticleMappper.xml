@@ -31,4 +31,8 @@
         SELECT *
         FROM `user_comment`;
     </select>
+
+    <select id="getAllArticleKind" resultType="com.seed.entity.ArticleKind">
+        select * from article_kind where iseffective=1;
+    </select>
 </mapper>

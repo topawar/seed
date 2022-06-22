@@ -18,4 +18,6 @@ public interface UserService {
     Integer updateUserInformation(User user);
 
     User userLogin(User user);
+
+    User userGetById(String uid);
 }

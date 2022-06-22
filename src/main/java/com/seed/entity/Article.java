@@ -13,13 +13,14 @@ import java.util.stream.Collectors;
  * @description: 文章
  */
 public class Article implements Serializable {
-    private static final long serialVersionUID = -158095260504209970L;
+    private static final long serialVersionUID = 415836726856731586L;
     private String ArticleId;
     private String Title;
     private String Content;
     private String ArticleKind;
     private Integer PointNum;
     private Integer FavoriteNum;
+    private String ImageUrl;
     private List<UserComment> UserCommentList;
 
 
@@ -83,13 +84,22 @@ public class Article implements Serializable {
         ArticleKind = articleKind;
     }
 
-    public Article(String articleId, String title, String content, String articleKind, Integer pointNum, Integer favoriteNum, List<UserComment> userCommentList) {
+    public String getImageUrl() {
+        return ImageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        ImageUrl = imageUrl;
+    }
+
+    public Article(String articleId, String title, String content, String articleKind, Integer pointNum, Integer favoriteNum, String imageUrl, List<UserComment> userCommentList) {
         ArticleId = articleId;
         Title = title;
         Content = content;
         ArticleKind = articleKind;
         PointNum = pointNum;
         FavoriteNum = favoriteNum;
+        ImageUrl = imageUrl;
         UserCommentList = userCommentList;
     }
 
@@ -102,6 +112,7 @@ public class Article implements Serializable {
                 ", ArticleKind='" + ArticleKind + '\'' +
                 ", PointNum=" + PointNum +
                 ", FavoriteNum=" + FavoriteNum +
+                ", ImageUrl=" + ImageUrl +
                 ", UserCommentList=" + UserCommentList +
                 '}';
     }

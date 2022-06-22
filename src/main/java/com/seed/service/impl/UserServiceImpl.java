@@ -70,4 +70,9 @@ public class UserServiceImpl implements UserService {
     public User userLogin(User user) {
         return userDao.userLogin(user);
     }
+
+    @Override
+    public User userGetById(String uid) {
+        return userDao.userGetById(uid);
+    }
 }
